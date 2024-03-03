@@ -34,7 +34,6 @@ android {
 
 dependencies {
 
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
     val ktor_version = "2.3.8"
 
     implementation("io.ktor:ktor-client-core:$ktor_version")
@@ -43,7 +42,6 @@ dependencies {
     implementation("io.ktor:ktor-serialization-kotlinx-json:$ktor_version")
 
     implementation("androidx.datastore:datastore-preferences:1.0.0")
-
 
     implementation("androidx.core:core-ktx:1.12.0")
     testImplementation("junit:junit:4.13.2")
