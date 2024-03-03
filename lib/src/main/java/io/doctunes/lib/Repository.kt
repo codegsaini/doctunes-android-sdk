@@ -1,13 +1,19 @@
 package io.doctunes.lib
 
-import io.doctunes.lib.interfaces.Repository
+import io.ktor.client.HttpClient
 
-class Repository(
-    private val service: Service
-): Repository {
+interface Repository {
+    suspend fun syncStrings(callback: (String?, Exception?) -> Unit)
+}
 
-    override suspend fun syncStrings() {
-        service.syncString()
+class RepositoryImpl(private val client: HttpClient): Repository {
+
+    override suspend fun syncStrings(callback: (String?, Exception?) -> Unit) {
+        try {
+            callback(null, null)
+        } catch (e: Exception) {
+            callback("Error occurred", e)
+        }
     }
 
 }

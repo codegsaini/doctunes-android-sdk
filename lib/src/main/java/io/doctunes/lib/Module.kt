@@ -16,10 +16,8 @@ object Module {
             }
         }
     }
-    private val service : Service by lazy {
-        Service(client)
-    }
+
     val repository : Repository by lazy {
-        Repository(service)
+        RepositoryImpl(client)
     }
 }

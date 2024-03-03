@@ -1,4 +1,5 @@
 <resources>
+    <string name="doctunes_translate_version" translatable="false">1i</string>
     <string name="app_name">Doctunes</string>
     <string name="app_name1">Doctunes</string>
     <string name="app_name2">Doctunes</string>
